@@ -1,0 +1,7 @@
+A MOO is a text-based adventure game. 
+
+In this MOO, there are five rooms connected to each other with exits.  Each exit has an origin ID and a destination ID, both of which associate it with different rooms by the room's ID.  You navigate from one room to the other by entering a command.  You can go north, east, south, or west.
+
+In traditional MOOs, users are often granted the ability to create rooms and linking exits.  In this app, you have the option to create more rooms by filling out a form.
+
+Thank you for checking out MOOapp!

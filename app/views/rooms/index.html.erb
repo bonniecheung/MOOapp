@@ -1,0 +1,54 @@
+
+
+<html>
+
+<head>
+
+<title>MOO</title>
+
+<style type="text/css">
+
+#box {
+    position:absolute;
+    border:solid black 1px;
+    top:10%;
+    right:25%;
+    bottom:10%;
+    left:25%;
+    padding:25px;
+    margin:25px;
+    }
+
+</style>
+
+</head>
+
+<body>
+
+<div id="box">
+
+<h1><%= @room.name %></h1>
+<%= @room.description %><br />
+
+<p><b>Exits:</b></p>
+
+<% exits = Exit.where(:origin_id => @room.id) %>
+<% exits.each do |e| %>
+<%= e.name %>
+[<%= e.command %>].
+<% end %>
+
+<p>
+
+<form method="post" action="">
+<textarea name="command" cols="70" rows="5"></textarea><br>
+<input type="submit" value="Go!" />
+</form>
+
+<p><small>Dig a <%= link_to "room", {:action => 'new'} %>!</small></p>
+
+</div>
+
+</body>
+
+</html>
